@@ -1,0 +1,24 @@
+{
+  "name": "alaget_endpoint",
+  "version": "1.0.0",
+  "description": "endpoint alaget",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon index.js"
+  },
+  "author": "Ernsit Isabekov",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "image-type": "^4.1.0",
+    "module-alias": "^2.2.2",
+    "moment": "^2.24.0",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
