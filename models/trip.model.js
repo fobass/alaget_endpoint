@@ -10,10 +10,6 @@ const Trip = function Trip(trip) {
     this.arrdate = trip.arrdate
     this.remark = trip.remark
     this.lastupdate = trip.lastupdate
-    this.photoURL = trip.photoURL
-    this.name = trip.name
-    this.lon = trip.lon
-    this.lat = trip.lat
     this.tripgrpkey = trip.tripgrpkey
 }
 
@@ -49,8 +45,8 @@ Trip.get = (uuid, result) => {
 }
 
 Trip.update = (trip, result) => {
-    const q = "UPDATE trips SET id = ?, uuid = ?, country = ?, city = ?, code = ?, depdate = ?, arrdate = ?, remark = ?, lastupdate = ?, photoURL = ?, name = ?, lon = ?, lat = ?, tripgrpkey = ?"
-    con.query(q, [trip.id, trip.uuid, trip.country, trip.city, trip.code, trip.depdate, trip.arrdate, trip.remark, trip.lastupdate, trip.photoURL, trip.name, trip.lon, trip.lat, trip.tripgrpkey], (err, res) => {
+    const q = "UPDATE trips SET id = ?, uuid = ?, country = ?, city = ?, code = ?, depdate = ?, arrdate = ?, remark = ?, lastupdate = ?, tripgrpkey = ?"
+    con.query(q, [trip.id, trip.uuid, trip.country, trip.city, trip.code, trip.depdate, trip.arrdate, trip.remark, trip.lastupdate, trip.tripgrpkey], (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(null, err);

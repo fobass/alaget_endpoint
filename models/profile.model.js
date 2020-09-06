@@ -70,6 +70,7 @@ ProfileModel.get = (uuid, result) => {
 
         res[0].isActive = (res[0].isActive == 1)
         res[0].isVerified = (res[0].isVerified == 1)
+        res[0].dateOfBirth = new Date(res[0].dateOfBirth)
         console.log("profile: ", res[0]);
         result(null, res[0]);
     });

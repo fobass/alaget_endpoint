@@ -1,6 +1,7 @@
 const express = require('express')
 const profile = require("./routes/profile.routes.js")
 const trip = require("./routes/trip.routes.js")
+const explorer = require("./routes/explorer.routes")
 const { con } = require("./models/conn.db.js");
 const multer = require('multer');
 const fs = require('fs')
@@ -17,6 +18,7 @@ app.use('/media', express.static(__dirname + '/media'));
 
 app.use('/api/profile', profile)
 app.use('/api/trip', trip)
+app.use('/api/explorer', explorer)
 
 app.get('/', function(req, res) {
     res.send("Hello World")
